@@ -1,5 +1,5 @@
 ---
-title: "2020 General Election Early Vote Statistics"
+title: "2020 General Election Statistics for Greene County, N.C."
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -134,11 +134,9 @@ US_state_data <- state_stats %>%
 ```
 Last updated: `r format(as.POSIXct(Sys.time(), format = "%y%m%d %H:%M"), "%m/%d/%Y %I:%M %p")` Eastern Time
 
-Michael McDonald • Professor, University of Florida  
-Web: [United States Elections Project](http://www.electproject.org/) • Twitter: [\@ElectProject](https://twitter.com/ElectProject)
 
 Detailed state statistics and analyses for reporting states  
-[CA](https://electproject.github.io/Early-Vote-2020G/CA.html) |  [CO](https://electproject.github.io/Early-Vote-2020G/CO.html) |  [DC](https://electproject.github.io/Early-Vote-2020G/DC.html) |  [FL](https://electproject.github.io/Early-Vote-2020G/FL.html) |  [HI](https://electproject.github.io/Early-Vote-2020G/HI.html) |  [IL](https://electproject.github.io/Early-Vote-2020G/IL.html) |  [ME](https://electproject.github.io/Early-Vote-2020G/ME.html) |  [MI](https://electproject.github.io/Early-Vote-2020G/MI.html) |  [MT](https://electproject.github.io/Early-Vote-2020G/MT.html) |  [NC](https://electproject.github.io/Early-Vote-2020G/NC.html) |  [NJ](https://electproject.github.io/Early-Vote-2020G/NJ.html) |  [NV](https://electproject.github.io/Early-Vote-2020G/NV.html) |  [OH](https://electproject.github.io/Early-Vote-2020G/OH.html) |  [OR](https://electproject.github.io/Early-Vote-2020G/OR.html) |  [PA](https://electproject.github.io/Early-Vote-2020G/PA.html) |  [SC](https://electproject.github.io/Early-Vote-2020G/SC.html) | 
+ |  [NC](https://electproject.github.io/Early-Vote-2020G/NC.html) |  
 [UT](https://electproject.github.io/Early-Vote-2020G/UT.html) | 
 [VT](https://electproject.github.io/Early-Vote-2020G/VT.html) | 
 [WA](https://electproject.github.io/Early-Vote-2020G/WA.html) | 
@@ -171,7 +169,6 @@ hcmap(map = "countries/us/us-all", data = US_2020g_map_data,
 
 #### Mail Ballots Returned by Party Registration
 
-Reporting states with party registration data: FL, NC  
 
 ``` {r echo = FALSE}
 
@@ -203,8 +200,7 @@ hcmap(map = "countries/us/us-all", data = US_2020g_map_data,
 ```
 
 #### Mail Ballots Requested by Party Registration
-
-Reporting states with party registration data: CA, CO, DC, FL, ME, NC, NJ, NV, OR, PA, UT  
+ 
 
 ``` {r echo = FALSE}
 
@@ -219,7 +215,7 @@ Registered Democrats have a **`r format(as.numeric(US_req_send_party[1,2]-US_req
 
 #### Mail Ballots Requested by Race and Ethnicity
 
-Reporting states with race or ethnicity data: NC, SC   
+NC  
 
 ``` {r echo = FALSE}
 
@@ -231,19 +227,10 @@ kable(US_req_send_race, valign = 't', format.args = list(big.mark = ",", scienti
 
 *Note:* Race and ethnicity statistics are for states that ask registered voters to provide their race and ethnicity. 
 
-#### Mail Ballots Requested by Age
-
-Reporting states with age data: CO, OH (partial), PA   
-
-``` {r echo = FALSE}
-kable(US_req_send_age, format.args = list(big.mark = ",", 
-  scientific = FALSE), digits = 1) %>%
-  kable_styling(bootstrap_options = "striped", full_width = F, position = "left")
 ```
 
 #### Mail Ballots Requested by Gender
-
-Reporting states with gender data: CO, NC   
+  
 
 ``` {r echo = FALSE}
 kable(US_req_send_gender, format.args = list(big.mark = ",", 
